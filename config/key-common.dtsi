@@ -19,7 +19,7 @@
             tap-ms = <10>;
             bindings
                     = <&macro_press &kp CAPS>
-                    , <&macro_wait_time 500>
+                    , <&macro_wait_time 1500>
                     , <&macro_release &kp CAPS>
                     ;
         };
@@ -28,7 +28,7 @@
             label = "Minimize windows for Windows";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
+            wait-ms = <40>;
             tap-ms = <10>;
             bindings
                     = <&macro_press &kp LALT>
