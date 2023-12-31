@@ -19,7 +19,7 @@
             tap-ms = <10>;
             bindings
                     = <&macro_press &kp CAPS>
-                    , <&macro_wait_time 1500>
+                    , <&macro_wait_time 2500>
                     , <&macro_release &kp CAPS>
                     ;
         };
@@ -32,9 +32,11 @@
             tap-ms = <10>;
             bindings
                     = <&macro_press &kp LALT>
+                    , <&macro_wait_time 60>
                     , <&kp SPACE>
+                    , <&macro_wait_time 60>
                     , <&macro_release &kp LALT>
-                    , <&macro_wait_time 50>
+                    , <&macro_wait_time 60>
                     , <&kp N>
                     ;
         };
