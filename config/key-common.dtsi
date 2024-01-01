@@ -19,7 +19,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
-            tap-ms = <1000>; //holding time until release
+            tap-ms = <700>; //holding time until release
             bindings = <&kp CAPS>;
         };
 
@@ -32,7 +32,7 @@
             bindings
                     = <&macro_press &kp LALT &kp SPACE>
                     , <&macro_release &kp LALT &kp SPACE>
-                    , <&kp N>
+                    , <&macro_tap &kp N>
                     ;
         };
 
