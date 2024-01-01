@@ -21,9 +21,7 @@
             wait-ms = <0>;
             tap-ms = <1000>;
             bindings
-                    = <&macro_press &kp CAPS>
-                    , <&macro_wait_time 2500>
-                    , <&macro_release &kp CAPS>
+                    = <&kp CAPS>
                     ;
         };
 
