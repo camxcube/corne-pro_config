@@ -19,23 +19,19 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
-            tap-ms = <1000>;
-            bindings
-                    = <&kp CAPS>
-                    ;
+            tap-ms = <1000>; //holding time until release
+            bindings = <&kp CAPS>;
         };
 
         MINIMIZE: MINIMIZE {
             label = "Minimize windows for Windows";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
+            wait-ms = <100>;
             tap-ms = <10>;
             bindings
-                    = <&macro_press &kp LALT>
-                    , <&kp SPACE>
-                    , <&macro_release &kp LALT>
-                    , <&macro_wait_time 500>
+                    = <&macro_press &kp LALT &kp SPACE>
+                    , <&macro_release &kp LALT &kp SPACE>
                     , <&kp N>
                     ;
         };
