@@ -127,20 +127,5 @@ jobs:
       - name: Archive (${{ steps.variables.outputs.display-name }})
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.artifact_name }}
+          name: firmware-${{ matrix.platform }}-${{ github.run_id }}
           path: build/artifacts
-
-  upload-all:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: all-artifacts
-
-      - name: Upload merged artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: merged-firmware
-          path: all-artifacts
