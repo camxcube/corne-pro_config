@@ -127,5 +127,5 @@ jobs:
       - name: Archive (${{ steps.variables.outputs.display-name }})
         uses: actions/upload-artifact@v4
         with:
-          name: firmware-${{ matrix.platform }}-${{ github.run_id }}
+          name: firmware-${{ matrix.board }}${{ matrix.shield && format('-{0}', matrix.shield) }}-${{ github.run_id }}
           path: build/artifacts
