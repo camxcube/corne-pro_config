@@ -32,18 +32,6 @@
         compatible = "zmk,keymap";
 
 
-        disabled_layer {
-          label = "";
-
-                        bindings = <
-    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                         &none  &none  &none    &none  &none  &none
-                        >;
-                };
-
-
         1st_layer {
           label = "";
 
@@ -52,6 +40,18 @@
    &kp LCMD    &kp A  &kp S  &kp D       &kp F      &kp G             &kp H      &kp J         &kp K      &kp L    &lt L12 SEMI  &kp ENTER
    &kp LSHFT   &kp Z  &kp X  &kp C       &kp V      &kp B             &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH      &kp RSHFT
                              &lt L2 ESC  &kp SPACE  &kp LALT          &kp LCTRL  &lt L3 SPACE  &kp RCMD
+                        >;
+                };
+
+// Dont't delete this layer, the purpose of this layer is to make layer 0 be the 1st layer, layer 2 be the 2nd layer and so on
+        disabled_layer {
+          label = "";
+
+                        bindings = <
+    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                         &none  &none  &none    &none  &none  &none
                         >;
                 };
 
