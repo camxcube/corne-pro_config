@@ -125,7 +125,22 @@ jobs:
           fi
 
       - name: Archive (${{ steps.variables.outputs.display-name }})
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: build/artifacts
+
+  upload-all:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: all-artifacts
+
+      - name: Upload merged artifact
         uses: actions/upload-artifact@v4
         with:
-          name: firmware-${{ github.job }}-${{ github.run_number }}-${{ github.run_attempt }}
-          path: build/artifacts
+          name: merged-firmware
+          path: all-artifacts
