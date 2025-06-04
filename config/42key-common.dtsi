@@ -1,3 +1,12 @@
+//define NameOfTheLayerInConfig LayerNumber
+//eg.
+//#define DEFAULT 0
+//#define LOWER   1
+//#define RAISE   2
+//
+//This allows you to use those defines, e.g. LOWER later in your keymap.
+//&mo LOWER
+
 #define L0 0
 #define L1 1
 #define L2 2
@@ -11,6 +20,7 @@
 #define L10 10
 #define L11 11
 #define L12 12
+#define L13 13
 
 
 #include "key-common.dtsi"
@@ -23,14 +33,14 @@
         compatible = "zmk,keymap";
 
 
-        default_layer {
+        disabled_layer {
           label = "";
 
                         bindings = <
-   &lt L3 TAB  &kp Q  &kp W  &kp E       &kp R      &kp T             &kp Y      &kp U         &kp I      &kp O    &kp P         &kp BSPC
-   &kp LCMD    &kp A  &kp S  &kp D       &kp F      &kp G             &kp H      &kp J         &kp K      &kp L    &lt L12 SEMI  &kp ENTER
-   &kp LSHFT   &kp Z  &kp X  &kp C       &kp V      &kp B             &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH      &td0
-                             &lt L1 ESC  &kp SPACE  &kp LALT          &kp LCTRL  &lt L2 SPACE  &kp RCMD
+    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+    &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                         &none  &none  &none    &none  &none  &none
                         >;
                 };
 
@@ -39,15 +49,27 @@
           label = "";
 
                         bindings = <
+   &lt L4 TAB  &kp Q  &kp W  &kp E       &kp R      &kp T             &kp Y      &kp U         &kp I      &kp O    &kp P         &kp BSPC
+   &kp LCMD    &kp A  &kp S  &kp D       &kp F      &kp G             &kp H      &kp J         &kp K      &kp L    &lt L13 SEMI  &kp ENTER
+   &kp LSHFT   &kp Z  &kp X  &kp C       &kp V      &kp B             &kp N      &kp M         &kp COMMA  &kp DOT  &kp FSLH      &td0
+                             &lt L2 ESC  &kp SPACE  &kp LALT          &kp LCTRL  &lt L3 SPACE  &kp RCMD
+                        >;
+                };
+
+
+        2st_layer {
+          label = "";
+
+                        bindings = <
    &kp LG(COMMA)  &kp LG(H)          &kp LG(LEFT)  &kp UP     &kp LG(RIGHT)  &kp LG(GRAVE)          &none        &kp F13   &kp F14   &kp F15        &none     &kp BSPC
-   &kp LCMD       &kp LC(LS(TAB))    &kp LEFT      &kp DOWN   &kp RIGHT      &kp LC(TAB)            &tog L6      &kp INS   &kp HOME  &kp PAGE_UP    &kp BSPC  &kp ENTER
+   &kp LCMD       &kp LC(LS(TAB))    &kp LEFT      &kp DOWN   &kp RIGHT      &kp LC(TAB)            &tog L7      &kp INS   &kp HOME  &kp PAGE_UP    &kp BSPC  &kp ENTER
    &kp LSHFT      &mac_screen_sleep  &kp LA(LEFT)  &kp LG(K)  &kp LA(RIGHT)  &kp LG(M)              &macro_caps  &kp DEL   &kp END   &kp PAGE_DOWN  &none     &kp RSHFT
                           	                       &none      &none          &none                  &kp RCTRL    &kp RALT  &kp RCMD
                         >;
                 };
 
 
-        2nd_layer {
+        3rd_layer {
             label = "";
 
                         bindings = <
@@ -59,26 +81,14 @@
                 };
 
 
-         3rd_layer {
-            label = "";
-
-                        bindings = <
-   &none         &mo L5         &kp F7  &kp F8    &kp F9    &kp F10           &none            &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
-   &kp LC(UP)    &kp LC(LEFT)   &kp F4  &kp F5    &kp F6    &kp F11           &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
-   &kp LC(DOWN)  &kp LC(RIGHT)  &kp F1  &kp F2    &kp F3    &kp F12           &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
-                                        &kp LCMD  &kp LALT  &kp LCTRL         &tog L4          &kp KP_N0  &kp DOT
-                        >;
-                };
-
-
          4th_layer {
             label = "";
 
                         bindings = <
-   &none  &none  &none  &none  &none  &none          &none            &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
-   &none  &none  &none  &none  &none  &none          &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
-   &none  &none  &none  &none  &none  &none          &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
-                        &none  &none  &none          &tog L4          &kp KP_N0  &kp DOT
+   &none         &mo L6         &kp F7  &kp F8    &kp F9    &kp F10           &none            &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
+   &kp LC(UP)    &kp LC(LEFT)   &kp F4  &kp F5    &kp F6    &kp F11           &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
+   &kp LC(DOWN)  &kp LC(RIGHT)  &kp F1  &kp F2    &kp F3    &kp F12           &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
+                                        &kp LCMD  &kp LALT  &kp LCTRL         &tog L5          &kp KP_N0  &kp DOT
                         >;
                 };
 
@@ -87,10 +97,10 @@
             label = "";
 
                         bindings = <
-   &none  &none              &kp LC(LA(LS(W)))  &kp LC(LA(LS(E)))  &kp LC(LA(LS(R)))      &kp LC(LA(LS(T)))          &kp LC(LA(LS(Y)))  &kp LC(LA(LS(U)))      &kp LC(LA(LS(I)))      &kp LC(LA(LS(O)))    &kp LC(LA(LS(P)))     &kp LC(LA(LS(BSPC)))
-   &none  &kp LC(LA(LS(A)))  &kp LC(LA(LS(S)))  &kp LC(LA(LS(D)))  &kp LC(LA(LS(F)))      &kp LC(LA(LS(G)))          &kp LC(LA(LS(H)))  &kp LC(LA(LS(J)))      &kp LC(LA(LS(K)))      &kp LC(LA(LS(L)))    &kp LC(LA(LS(SEMI)))  &kp LC(LA(LS(ENTER)))
-   &none  &kp LC(LA(LS(Z)))  &kp LC(LA(LS(X)))  &kp LC(LA(LS(C)))  &kp LC(LA(LS(V)))      &kp LC(LA(LS(B)))          &kp LC(LA(LS(N)))  &kp LC(LA(LS(M)))      &kp LC(LA(LS(COMMA)))  &kp LC(LA(LS(DOT)))  &kp LC(LA(LS(FSLH)))  &none
-                                                &none              &kp LC(LA(LS(SPACE)))  &none                      &none              &kp LC(LA(LS(SPACE)))  &none
+   &none  &none  &none  &none  &none  &none          &none            &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
+   &none  &none  &none  &none  &none  &none          &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
+   &none  &none  &none  &none  &none  &none          &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
+                        &none  &none  &none          &tog L5          &kp KP_N0  &kp DOT
                         >;
                 };
 
@@ -99,10 +109,10 @@
             label = "";
 
                         bindings = <
-   &lt L9 TAB  &kp Q  &kp W  &kp E       &kp R      &kp T             &kp Y     &kp U         &kp I      &kp O    &kp P         &kp BSPC
-   &kp LCTRL   &kp A  &kp S  &kp D       &kp F      &kp G             &kp H     &kp J         &kp K      &kp L    &lt L12 SEMI  &kp ENTER
-   &kp LSHFT   &kp Z  &kp X  &kp C       &kp V      &kp B             &kp N     &kp M         &kp COMMA  &kp DOT  &kp FSLH      &td0
-                             &lt L7 ESC  &kp SPACE  &kp LALT          &kp LCMD  &lt L8 SPACE  &kp RCTRL
+   &none  &none              &kp LC(LA(LS(W)))  &kp LC(LA(LS(E)))  &kp LC(LA(LS(R)))      &kp LC(LA(LS(T)))          &kp LC(LA(LS(Y)))  &kp LC(LA(LS(U)))      &kp LC(LA(LS(I)))      &kp LC(LA(LS(O)))    &kp LC(LA(LS(P)))     &kp LC(LA(LS(BSPC)))
+   &none  &kp LC(LA(LS(A)))  &kp LC(LA(LS(S)))  &kp LC(LA(LS(D)))  &kp LC(LA(LS(F)))      &kp LC(LA(LS(G)))          &kp LC(LA(LS(H)))  &kp LC(LA(LS(J)))      &kp LC(LA(LS(K)))      &kp LC(LA(LS(L)))    &kp LC(LA(LS(SEMI)))  &kp LC(LA(LS(ENTER)))
+   &none  &kp LC(LA(LS(Z)))  &kp LC(LA(LS(X)))  &kp LC(LA(LS(C)))  &kp LC(LA(LS(V)))      &kp LC(LA(LS(B)))          &kp LC(LA(LS(N)))  &kp LC(LA(LS(M)))      &kp LC(LA(LS(COMMA)))  &kp LC(LA(LS(DOT)))  &kp LC(LA(LS(FSLH)))  &none
+                                                &none              &kp LC(LA(LS(SPACE)))  &none                      &none              &kp LC(LA(LS(SPACE)))  &none
                         >;
                 };
 
@@ -111,10 +121,10 @@
             label = "";
 
                         bindings = <
-   &kp LC(COMMA)  &kp LA(F4)       &kp HOME      &kp UP     &kp END        &none                &none     &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &none     &kp BSPC
-   &kp LCTRL      &kp LC(LS(TAB))  &kp LEFT      &kp DOWN   &kp RIGHT      &kp LC(TAB)          &tog L6   &kp INS    &kp HOME  &kp PAGE_UP      &kp BSPC  &kp ENTER
-   &kp LSHFT      &kp LG(L)        &kp LC(LEFT)  &kp LC(K)  &kp LC(RIGHT)  &MINIMIZE            &kp CAPS  &kp DEL    &kp END   &kp PAGE_DOWN    &none     &kp RSHFT
-                          	                      &none      &none          &none                &kp RCMD  &kp RALT   &kp RCTRL
+   &lt L10 TAB  &kp Q  &kp W  &kp E       &kp R      &kp T             &kp Y     &kp U         &kp I      &kp O    &kp P         &kp BSPC
+   &kp LCTRL    &kp A  &kp S  &kp D       &kp F      &kp G             &kp H     &kp J         &kp K      &kp L    &lt L13 SEMI  &kp ENTER
+   &kp LSHFT    &kp Z  &kp X  &kp C       &kp V      &kp B             &kp N     &kp M         &kp COMMA  &kp DOT  &kp FSLH      &td0
+                              &lt L8 ESC  &kp SPACE  &kp LALT          &kp LCMD  &lt L9 SPACE  &kp RCTRL
                         >;
                 };
 
@@ -123,10 +133,10 @@
             label = "";
 
                         bindings = <
-   &kp GRAVE  &kp N1  &kp N2    &kp N3     &kp N4     &kp N5            &kp N6    &kp N7            &kp N8     &kp N9     &kp N0    &kp MINUS
-   &kp LCTRL  &none   &kp BSLH  &kp RBKT   &kp LBKT   &none             &kp LEFT  &kp DOWN          &kp UP     &kp RIGHT  &kp SEMI  &kp EQUAL
-   &kp LSHFT  &none   &none     &none      &none      &none             &none     &kp SINGLE_QUOTE  &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-                    	           &kp LCTRL  &kp LALT   &kp LCMD          &none     &none             &none
+   &kp LC(COMMA)  &kp LA(F4)       &kp HOME      &kp UP     &kp END        &none                &none     &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &none     &kp BSPC
+   &kp LCTRL      &kp LC(LS(TAB))  &kp LEFT      &kp DOWN   &kp RIGHT      &kp LC(TAB)          &tog L7   &kp INS    &kp HOME  &kp PAGE_UP      &kp BSPC  &kp ENTER
+   &kp LSHFT      &kp LG(L)        &kp LC(LEFT)  &kp LC(K)  &kp LC(RIGHT)  &MINIMIZE            &kp CAPS  &kp DEL    &kp END   &kp PAGE_DOWN    &none     &kp RSHFT
+                          	                     &none      &none          &none                &kp RCMD  &kp RALT   &kp RCTRL
                         >;
                 };
 
@@ -135,10 +145,10 @@
             label = "";
 
                         bindings = <
-   &none        &mo L11            &kp F7  &kp F8     &kp F9    &kp F10           &kp KP_NUM       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
-   &kp LG(TAB)  &kp LC(LG(LEFT))   &kp F4  &kp F5     &kp F6    &kp F11           &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
-   &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp F1  &kp F2     &kp F3    &kp F12           &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
-                                           &kp LCTRL  &kp LALT  &kp LCMD          &tog L10         &kp KP_N0  &kp DOT
+   &kp GRAVE  &kp N1  &kp N2    &kp N3     &kp N4     &kp N5            &kp N6    &kp N7            &kp N8     &kp N9     &kp N0    &kp MINUS
+   &kp LCTRL  &none   &kp BSLH  &kp RBKT   &kp LBKT   &none             &kp LEFT  &kp DOWN          &kp UP     &kp RIGHT  &kp SEMI  &kp EQUAL
+   &kp LSHFT  &none   &none     &none      &none      &none             &none     &kp SINGLE_QUOTE  &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                    	        &kp LCTRL  &kp LALT   &kp LCMD          &none     &none             &none
                         >;
                 };
 
@@ -147,15 +157,27 @@
             label = "";
 
                         bindings = <
-   &none  &none  &none  &none  &none  &none          &kp KP_NUM       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
-   &none  &none  &none  &none  &none  &none          &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
-   &none  &none  &none  &none  &none  &none          &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
-                        &none  &none  &none          &tog L10         &kp KP_N0  &kp DOT
+   &none        &mo L12            &kp F7  &kp F8     &kp F9    &kp F10           &kp KP_NUM       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
+   &kp LG(TAB)  &kp LC(LG(LEFT))   &kp F4  &kp F5     &kp F6    &kp F11           &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
+   &kp LG(TAB)  &kp LC(LG(RIGHT))  &kp F1  &kp F2     &kp F3    &kp F12           &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
+                                           &kp LCTRL  &kp LALT  &kp LCMD          &tog L11         &kp KP_N0  &kp DOT
                         >;
                 };
 
 
          11th_layer {
+            label = "";
+
+                        bindings = <
+   &none  &none  &none  &none  &none  &none          &kp KP_NUM       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none         &kp BSPC
+   &none  &none  &none  &none  &none  &none          &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp ENTER
+   &none  &none  &none  &none  &none  &none          &kp KP_DIVIDE    &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MINUS  &kp RSHFT
+                        &none  &none  &none          &tog L11         &kp KP_N0  &kp DOT
+                        >;
+                };
+
+
+         12th_layer {
             label = "";
 
                         bindings = <
@@ -167,7 +189,7 @@
                 };
 
 
-         12th_layer {
+         13th_layer {
             label = "";
 
                         bindings = <
