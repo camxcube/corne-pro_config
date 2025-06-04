@@ -120,10 +120,10 @@
             label = "";
 
                         bindings = <
-   &kp LC(COMMA)  &kp LA(F4)       &kp HOME      &kp UP        &kp END        &none                &kp LS(F10)  &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &none     &kp BSPC
-   &kp LCTRL      &kp LC(LS(TAB))  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(TAB)          &tog L6      &kp INS    &kp HOME  &kp PAGE_UP      &kp BSPC  &kp ENTER
-   &kp LSHFT      &kp LG(L)        &kp LC(LEFT)  &kp LA(HOME)  &kp LC(RIGHT)  &kp DEL              &kp CAPS     &kp DEL    &kp END   &kp PAGE_DOWN    &none     &kp RSHFT
-                          	                     &none         &none          &none                &kp RCMD     &kp RALT   &kp RCTRL
+   &kp LC(COMMA)  &kp LA(F4)       &kp HOME      &kp UP        &kp END        &none                &WIN_MENU  &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &none     &kp BSPC
+   &kp LCTRL      &kp LC(LS(TAB))  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(TAB)          &tog L6    &kp INS    &kp HOME  &kp PAGE_UP      &kp BSPC  &kp ENTER
+   &kp LSHFT      &kp LG(L)        &kp LC(LEFT)  &kp LA(HOME)  &kp LC(RIGHT)  &kp DEL              &kp CAPS   &kp DEL    &kp END   &kp PAGE_DOWN    &none     &kp RSHFT
+                          	                     &none         &none          &none                &kp RCMD   &kp RALT   &kp RCTRL
                         >;
                 };
 
