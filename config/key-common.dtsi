@@ -1,4 +1,7 @@
 / {
+
+
+
     // macros
     macros {
         mac_screen_sleep: mac_screen_sleep {
@@ -38,4 +41,33 @@
 
 
     };
+
+
+
+    // Tap dance setting
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RShift when tap once, CapsL when tap twice";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RSHFT>, <&kp CAPS>;
+        };
+
+        ht_hp: hold_tap_hold_preffered {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold tap with hold preferred flavor";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+
+
+
+
+
 };
