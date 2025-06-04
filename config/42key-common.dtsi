@@ -84,7 +84,7 @@
             label = "";
 
                         bindings = <
-   &none         &mo L11        &kp F1  &kp F2    &kp F3     &kp F10           &kp CLEAR     &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_EQUAL     &kp BSPC
+   &none         &mo L11        &kp F1  &kp F2    &kp F3     &kp F10           &kp CLEAR2    &kp KP_N7  &kp KP_N8   &kp KP_N9  &kp KP_EQUAL     &kp BSPC
    &kp LC(UP)    &kp LC(LEFT)   &kp F4  &kp F5    &kp F6     &kp F11           &kp KP_PLUS   &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_MULTIPLY  &kp KP_ENTER
    &kp LC(DOWN)  &kp LC(RIGHT)  &kp F7  &kp F8    &kp F9     &kp F12           &kp KP_MINUS  &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE    &kp RSHFT
                                         &kp LCMD  &kp LCTRL  &kp LALT          &tog L5       &kp KP_N0  &kp KP_DOT 
@@ -96,7 +96,7 @@
             label = "";
 
                         bindings = <
-   &kp TAB    &none  &none  &none     &none      &none             &kp CLEAR     &kp KP_N7  &kp KP_N8   &kp KP_N9  &none            &kp BSPC
+   &kp TAB    &none  &none  &none     &none      &none             &kp CLEAR2    &kp KP_N7  &kp KP_N8   &kp KP_N9  &none            &kp BSPC
    &kp LCMD   &none  &none  &none     &none      &none             &kp KP_PLUS   &kp KP_N4  &kp KP_N5   &kp KP_N6  &kp KP_MULTIPLY  &kp KP_ENTER
    &kp LSHFT  &none  &none  &none     &none      &none             &kp KP_MINUS  &kp KP_N1  &kp KP_N2   &kp KP_N3  &kp KP_DIVIDE    &kp RSHFT
                             &kp LCMD  &kp LCTRL  &kp LALT          &tog L5       &kp KP_N0  &kp KP_DOT
@@ -120,7 +120,7 @@
             label = "";
 
                         bindings = <
-   &kp LC(COMMA)  &kp LA(F4)       &kp HOME      &kp UP        &kp END        &none                &kp K_MENU  &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &none     &kp BSPC
+   &kp LC(COMMA)  &kp LA(F4)       &kp HOME      &kp UP        &kp END        &none                &kp C_MENU  &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK  &none     &kp BSPC
    &kp LCTRL      &kp LC(LS(TAB))  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LC(TAB)          &tog L6     &kp INS    &kp HOME  &kp PAGE_UP      &kp BSPC  &kp ENTER
    &kp LSHFT      &kp LG(L)        &kp LC(LEFT)  &kp LA(HOME)  &kp LC(RIGHT)  &none                &kp CAPS    &kp DEL    &kp END   &kp PAGE_DOWN    &none     &kp RSHFT
                           	                     &none         &none          &none                &kp RCMD    &kp RALT   &kp RCTRL
