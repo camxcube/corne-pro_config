@@ -53,17 +53,480 @@
                     ;
         };
 
-        WIN_MENU: WIN_MENU {
+//        WIN_MENU: WIN_MENU {
+//            label = "Menu Key on Windows Keyboard";
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            wait-ms = <35>;
+//            tap-ms = <100>;
+//            bindings
+//                    = <&macro_press &kp LSHFT &kp F10>
+//                    , <&macro_release &kp LSHFT &kp F10>
+//                    ;
+//        };
+
+        WIN_MENU1: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            bindings
+                    = <&macro_press &kp LSHFT &kp F10>
+                    , <&macro_release &kp LSHFT &kp F10>
+                    ;
+        };
+
+        WIN_MENU2: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            bindings
+                    = <&macro_press &kp LSHFT &kp F10>
+                    , <&macro_release &kp LSHFT &kp F10>
+                    ;
+        };
+
+        WIN_MENU3: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            bindings
+                    = <&macro_press &kp LSHFT &kp F10>
+                    , <&macro_release &kp LSHFT &kp F10>
+                    ;
+        };
+
+        WIN_MENU4: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <125>;
+            bindings
+                    = <&macro_press &kp LSHFT &kp F10>
+                    , <&macro_release &kp LSHFT &kp F10>
+                    ;
+        };
+
+        WIN_MENU5: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <155>;
+            bindings
+                    = <&macro_press &kp LSHFT &kp F10>
+                    , <&macro_release &kp LSHFT &kp F10>
+                    ;
+        };
+
+
+
+
+
+        WIN_MENU6: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_press &kp F10>
+                    , <&macro_release &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU7: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_press &kp F10>
+                    , <&macro_release &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU8: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_press &kp F10>
+                    , <&macro_release &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU9: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <125>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_press &kp F10>
+                    , <&macro_release &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU10: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <155>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_press &kp F10>
+                    , <&macro_release &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+
+
+
+        WIN_MENU11: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <10>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU12: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            tap-ms = <10>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU13: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <95>;
+            tap-ms = <10>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU14: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <125>;
+            tap-ms = <10>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU15: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <10>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+
+
+
+        WIN_MENU16: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <40>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU17: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            tap-ms = <40>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU18: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <95>;
+            tap-ms = <40>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU19: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <125>;
+            tap-ms = <40>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU20: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <40>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+
+
+
+        WIN_MENU21: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            tap-ms = <70>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU22: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <95>;
+            tap-ms = <70>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU23: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <125>;
+            tap-ms = <70>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU24: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <70>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU25: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <70>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+
+
+        WIN_MENU26: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            tap-ms = <100>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU27: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <95>;
+            tap-ms = <100>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU28: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <125>;
+            tap-ms = <100>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU29: WIN_MENU {
             label = "Menu Key on Windows Keyboard";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <35>;
             tap-ms = <100>;
             bindings
-                    = <&macro_press &kp LSHFT &kp F10>
-                    , <&macro_release &kp LSHFT &kp F10>
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
                     ;
         };
+
+        WIN_MENU30: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <100>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+
+
+        WIN_MENU31: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <65>;
+            tap-ms = <130>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU32: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <95>;
+            tap-ms = <130>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU33: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <125>;
+            tap-ms = <130>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU34: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <130>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
+        WIN_MENU35: WIN_MENU {
+            label = "Menu Key on Windows Keyboard";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <35>;
+            tap-ms = <130>;
+            bindings
+                    = <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp F10>
+                    , <&macro_release &kp LSHFT>
+                    ;
+        };
+
 
 
     };
