@@ -76,49 +76,7 @@
                     ;
         };
 
-        WIN_MENU2: WIN_MENU {
-            label = "Menu Key on Windows Keyboard";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <65>;
-            bindings
-                    = <&macro_press &kp LSHFT &kp F10>
-                    , <&macro_release &kp LSHFT &kp F10>
-                    ;
-        };
 
-        WIN_MENU3: WIN_MENU {
-            label = "Menu Key on Windows Keyboard";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <65>;
-            bindings
-                    = <&macro_press &kp LSHFT &kp F10>
-                    , <&macro_release &kp LSHFT &kp F10>
-                    ;
-        };
-
-        WIN_MENU4: WIN_MENU {
-            label = "Menu Key on Windows Keyboard";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <125>;
-            bindings
-                    = <&macro_press &kp LSHFT &kp F10>
-                    , <&macro_release &kp LSHFT &kp F10>
-                    ;
-        };
-
-        WIN_MENU5: WIN_MENU {
-            label = "Menu Key on Windows Keyboard";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <155>;
-            bindings
-                    = <&macro_press &kp LSHFT &kp F10>
-                    , <&macro_release &kp LSHFT &kp F10>
-                    ;
-        };
 
 
 
